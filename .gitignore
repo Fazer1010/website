@@ -1,0 +1,15 @@
+# Original Annnimate starter pack (third-party source, 14 MB of preview videos).
+# The components the site uses are already copied into assets/anm/.
+Components/
+
+# Temporary files from local previews and screenshot checks
+_shot.html
+_m_*.html
+_frame_*.html
+
+# OS and editor clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+__pycache__/
