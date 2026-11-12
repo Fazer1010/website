@@ -23,7 +23,6 @@
 <link rel="stylesheet" href="assets/anm/feature-dialog.css">
 <link rel="stylesheet" href="assets/anm/scale-slider.css">
 <link rel="stylesheet" href="assets/anm/image-fly-in.css">
-<link rel="stylesheet" href="assets/anm/echo-headline.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -148,27 +147,23 @@
     </div>
   </section>
 
-  <!-- Echo headline -->
-  <section class="echo" aria-label="Babil">
-    <div class="eh_page">
-      <div class="eh_track" data-anm-echo-headline
-        data-anm-copies="9"
-        data-anm-depth="1.2"
-        data-anm-rotate-x="18"
-        data-anm-rotate-y="22"
-        data-anm-rotate-z="0"
-        data-anm-fade="color"
-        data-anm-trigger="onEnter"
-        data-anm-once="true">
-        <div class="eh_stage">
-          <div class="eh_slab">
-            <h2 class="eh_word" data-anm-eh-word>Babil</h2>
-          </div>
-        </div>
+  <!-- 3D logo -->
+  <section class="logo3d-section" aria-label="Babil International logo">
+    <div class="logo3d" data-logo3d>
+      <div class="logo3d-stage" data-logo3d-stage>
+        <img class="logo3d-fallback" src="assets/img/logo-mark.png" alt="" width="92" height="90">
       </div>
+      <span class="logo3d-shadow" aria-hidden="true"></span>
+      <h2 class="logo3d-wordmark">
+        <span class="logo3d-babil">BABIL</span>
+        <span class="logo3d-intl">INTERNATIONAL</span>
+      </h2>
+      <p class="logo3d-hint">Drag the globe to spin it</p>
     </div>
     <p class="echo-caption">Thirty-five years of trading, and still growing with the nation.</p>
   </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js" defer></script>
+  <script src="assets/js/logo3d.js" defer></script>
 
   <!-- Verticals -->
   <section class="section on-dark" id="verticals">
@@ -373,7 +368,6 @@
 <script src="assets/anm/feature-dialog.js"></script>
 <script src="assets/anm/scale-slider.js"></script>
 <script src="assets/anm/image-fly-in.js"></script>
-<script src="assets/anm/echo-headline.js"></script>
 <script src="assets/js/stack-slider.js"></script>
 <script src="assets/js/catalogue.js"></script>
 <script src="assets/js/site.js"></script>

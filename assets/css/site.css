@@ -577,11 +577,33 @@ html.js [data-reveal] { visibility: hidden; }
 }
 .about-hero { min-height: 100svh; padding-top: var(--nav-h); }
 
-.echo { background: var(--cream); }
-.echo .eh_page { --eh-bg: transparent; --eh-fg: var(--brown); --eh-sans: var(--font-display); }
-.echo .eh_stage { height: auto; min-height: 42vh; padding: 20px var(--gutter); }
-.echo .eh_slab { font-weight: 300; font-size: clamp(64px, 16vw, 260px); }
-.echo-caption { text-align: center; padding: 0 var(--gutter) 48px; font-size: 14px; color: rgba(43, 26, 18, 0.6); }
+/* 3D logo (about page) */
+.logo3d-section {
+  background:
+    radial-gradient(60% 55% at 50% 42%, rgba(246, 166, 35, 0.18), rgba(246, 166, 35, 0) 70%),
+    var(--cream);
+  padding: clamp(48px, 7vw, 96px) var(--gutter) 0;
+  overflow: hidden;
+}
+.logo3d { position: relative; display: flex; flex-direction: column; align-items: center; max-width: 720px; margin: 0 auto; }
+.logo3d-stage {
+  position: relative; display: grid; place-items: center;
+  width: min(440px, 82vw); aspect-ratio: 1 / 1; cursor: grab;
+}
+.logo3d.is-dragging .logo3d-stage { cursor: grabbing; }
+.logo3d-stage canvas { display: block; width: 100% !important; height: 100% !important; }
+.logo3d-fallback { width: 62%; height: auto; }
+.logo3d-shadow {
+  width: min(260px, 50vw); height: 26px; margin-top: -34px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(43, 26, 18, 0.32), rgba(43, 26, 18, 0));
+  pointer-events: none;
+}
+.logo3d-wordmark { display: flex; flex-direction: column; align-items: center; margin-top: 18px; font-family: var(--font-body); line-height: 1; }
+.logo3d-babil { font-size: clamp(56px, 11vw, 120px); font-weight: 800; letter-spacing: 0.14em; margin-right: -0.14em; color: var(--brown); }
+.logo3d-intl { margin-top: 0.35em; font-size: clamp(16px, 3vw, 32px); font-weight: 800; letter-spacing: 0.32em; margin-right: -0.32em; color: var(--orange); }
+.logo3d-hint { margin-top: 18px; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(43, 26, 18, 0.45); opacity: 0; transition: opacity 0.4s; }
+.logo3d.is-3d .logo3d-hint { opacity: 1; }
+.echo-caption { text-align: center; padding: 28px var(--gutter) clamp(48px, 7vw, 88px); font-size: 14px; color: rgba(43, 26, 18, 0.6); }
 
 /* =====================================================================
    Content blocks
