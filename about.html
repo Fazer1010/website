@@ -150,20 +150,24 @@
   <!-- 3D logo -->
   <section class="logo3d-section" aria-label="Babil International logo">
     <div class="logo3d" data-logo3d>
+      <h2 class="visually-hidden">Babil International</h2>
       <div class="logo3d-stage" data-logo3d-stage>
-        <img class="logo3d-fallback" src="assets/img/logo-mark.png" alt="" width="92" height="90">
+        <img class="logo3d-fallback" src="assets/img/logo-color.png" alt="Babil International logo" width="276" height="90">
       </div>
       <span class="logo3d-shadow" aria-hidden="true"></span>
-      <h2 class="logo3d-wordmark">
-        <span class="logo3d-babil">BABIL</span>
-        <span class="logo3d-intl">INTERNATIONAL</span>
-      </h2>
-      <p class="logo3d-hint">Drag the globe to spin it</p>
+      <p class="logo3d-hint">Drag the logo to turn it</p>
     </div>
     <p class="echo-caption">Thirty-five years of trading, and still growing with the nation.</p>
   </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js" defer></script>
-  <script src="assets/js/logo3d.js" defer></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="assets/js/logo3d.js"></script>
 
   <!-- Verticals -->
   <section class="section on-dark" id="verticals">
